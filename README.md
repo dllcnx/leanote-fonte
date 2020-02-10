@@ -1,4 +1,5 @@
 # leanote-fonte
+  [观看效果](http://note.myllcn.com/preview?themeId=5e40c64e499442000d00007d)
 
   根据官方主题市场的fonte进行修改，进行了样式微调。还有就是原文章页不知道为什么样式错乱和显示有问题，所以也没找原因修复，直接重新编写了文章页。添加footer和评论系统，替换了官方disqus评论系统为gittalk，因为一些原因，Disqus国内无法使用，但是又懒得去翻，就用了基于git的gittalk。
 
@@ -10,4 +11,3 @@
   ![1](./images/screenshot.png)
 
   ![2](./images/gitalk.png)
-
