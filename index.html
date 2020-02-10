@@ -1,0 +1,54 @@
+{{template "header.html" .}}
+
+<body>
+<header>
+  <div class="content-home text-center">
+  <a class="avatar" href="/">
+      {{if $.blogInfo.Logo}}
+      <img src="{{$.blogInfo.Logo}}" alt="" />
+      {{else}}
+      <img src="{{$.themeBaseUrl}}/avatar.jpg" alt="" />
+      {{end}}
+  </a>
+  <h1 class="name">
+    {{$.blogInfo.Title}}
+  </h1>
+  <div class="slogan">
+    {{$.blogInfo.SubTitle}}
+  </div>
+  <hr>
+
+  <ul class="text-center nav">
+    
+      <li class="item">
+        <a href="{{$.archiveUrl}}" target="_blank">Blog</a>
+        <span>|</span>
+      </li>
+    
+      <li class="item">
+        <a href="https://github.com/{{$.themeInfo.github}}" target="_blank">Github</a>
+        <span>|</span>
+      </li>
+    
+      <li class="item">
+        <a href="https://www.npmjs.com/~{{$.themeInfo.npm}}" target="_blank">npm</a>
+        <span>|</span>
+      </li>
+    
+      <li class="item">
+        <a href="{{$.themeInfo.about}}" target="_blank">About</a>
+        <span>|</span>
+      </li>
+    
+  </ul>
+
+
+</div>
+</header>
+
+
+
+
+
+</body>
+</html>

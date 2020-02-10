@@ -1,0 +1,75 @@
+{{template "header.html" .}}
+
+<body>
+    <div class="content-archive">
+        <div class="archive-header">
+            <a class="home-entry" href="/">首页</a>
+
+            <a class="avatar" href="/">
+                {{if $.blogInfo.Logo}}
+                <img src="{{$.blogInfo.Logo}}" alt="" />
+                {{else}}
+                <img src="{{$.themeBaseUrl}}/avatar.jpg" alt="" />
+                {{end}}
+                <div class="blog-info">
+                    <h3 class="name">
+                        {{$.blogInfo.Title}}
+                    </h3>
+                    <div class="slogan">
+                        {{$.blogInfo.SubTitle}}
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!--TODO-->
+        <div class="archive-body">
+
+
+
+
+
+
+            {{range $.archives}}
+            <section class="box-year">
+                <div class="box-year-title">
+                    <a href="" class="text-year">{{.Year}}</a>
+                </div>
+
+                <div class="list-article">
+                    {{range .Posts}}
+                    <div class="item-article">
+                        <div class="article-datetime">
+                            <a href="{{$.postUrl}}/{{.UrlTitle}}" class="archive-article-date"><time datetime="" itemprop="datePublished">
+                            <!--<a href="" class="archive-article-date"><time datetime="" itemprop="datePublished">-->
+                                    <!--02-23-->
+                                    {{dateFormat .PublicTime "01-02"}}
+                                </time></a>
+                        </div>
+
+
+
+                        <div class="article-title">
+                            <a class="article-link" href="{{$.postUrl}}/{{.UrlTitle}}">{{.Title}}</a>
+                        </div>
+
+
+
+                    </div>
+                    {{end}}
+
+
+
+                </div>
+            </section>
+            {{end}}
+
+
+        </div>
+        
+    </div>
+
+
+
+</body>
+</html>

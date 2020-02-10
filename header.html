@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="leanote,leanote.com">
+    <meta name="description" content="{{$.themeInfo.Desc}}">
+    <meta name="author" content="{{$.themeInfo.Author}}">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{$.blogInfo.Title}}">
+    <meta property="og:url" content="{{$.indexUrl}}/index.html">
+    <meta property="og:site_name" content="{{$.blogInfo.Title}}">
+    <meta property="og:description">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{$.blogInfo.Title}}">
+    <meta name="twitter:description">
+    <!-- Bootstrap core CSS -->
+    <link href="{{$.bootstrapCssUrl}}" rel="stylesheet">
+    <!-- 字体必须同一域 -->
+    <link href="{{$.fontAwesomeUrl}}" rel="stylesheet">
+    <link href="{{$.themeBaseUrl}}/styles.css" rel="stylesheet">
+    <link href="{{$.themeBaseUrl}}/karticle.css" rel="stylesheet">
+    <link href="{{$.themeBaseUrl}}/style.css" rel="stylesheet">
+    <title>
+        {{if $.curIsIndex}}
+        {{$.blogInfo.Title}}
+        {{else if $.curIsCate}}
+        分类-{{$.curCateTitle}}
+        {{else if $.curIsSearch}}
+        搜索-{{$.keywords}}
+        {{else if $.curIsTags}}
+        我的标签
+        {{else if $.curIsTagPosts}}
+        标签-{{$.curTag}}
+        {{else if $.curIsPost}}
+        {{$.post.Title}}
+        {{else if $.curIsSingle}}
+        {{$.single.Title}}
+        {{else if $.curIsArchive}}
+        归档
+        {{end}}
+    </title>    
+</head>
